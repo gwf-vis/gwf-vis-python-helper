@@ -1,8 +1,8 @@
-from setuptools import setup
+from setuptools import setup, find_namespace_packages
 
 setup(
     name='gwfvis',
     version='0.1',
     description='gwfvis',
-    packages=['gwfvis']
+    packages=find_namespace_packages(include=['gwfvis.*'])
 )
