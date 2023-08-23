@@ -1,19 +1,32 @@
 import base64
 import json
+from strenum import StrEnum
+
+
+class PluginNames(StrEnum):
+    SQLITE_LOCAL_DATA_PROVIDER = "gwf-default.sqlite-local-data-provider"
+    GWFVISDB_DATA_PROVIDER = "gwf-default.gwfvisdb-data-provider"
+    TEST_DATA_FETCHER = "gwf-default.test-data-fetcher"
+    TILE_LAYER = "gwf-default.tile-layer"
+    GEOJSON_LAYER = "gwf-default.geojson-layer"
+    LEGEND = "gwf-default.legend"
+    DATA_CONTROL = "gwf-default.data-control"
+    METADATA = "gwf-default.metadata"
+    MARKDOWN = "gwf-default.markdown"
 
 _DEFAULT_PLUGIN_PATH = "https://gwf-vis.usask.ca/plugins/default"
 _RECOMMENDED_PLUGIN_IMPORTS = {
-    "gwf-default.sqlite-local-data-provider": f"{_DEFAULT_PLUGIN_PATH}/sqlite-local-data-provider.plugin.js",
-    "gwf-default.gwfvisdb-data-provider": f"{_DEFAULT_PLUGIN_PATH}/gwfvisdb-data-provider.plugin.js",
-    "gwf-default.test-data-fetcher": f"{_DEFAULT_PLUGIN_PATH}/test-data-fetcher.plugin.js",
-    "gwf-default.tile-layer": f"{_DEFAULT_PLUGIN_PATH}/tile-layer.plugin.js",
-    "gwf-default.geojson-layer": f"{_DEFAULT_PLUGIN_PATH}/geojson-layer.plugin.js",
-    "gwf-default.legend": f"{_DEFAULT_PLUGIN_PATH}/legend.plugin.js",
-    "gwf-default.data-control": f"{_DEFAULT_PLUGIN_PATH}/data-control.plugin.js",
-    "gwf-default.metadata": f"{_DEFAULT_PLUGIN_PATH}/metadata.plugin.js",
-    "gwf-default.markdown": f"{_DEFAULT_PLUGIN_PATH}/markdown.plugin.js",
+    PluginNames.SQLITE_LOCAL_DATA_PROVIDER: f"{_DEFAULT_PLUGIN_PATH}/sqlite-local-data-provider.plugin.js",
+    PluginNames.GWFVISDB_DATA_PROVIDER: f"{_DEFAULT_PLUGIN_PATH}/gwfvisdb-data-provider.plugin.js",
+    PluginNames.TEST_DATA_FETCHER: f"{_DEFAULT_PLUGIN_PATH}/test-data-fetcher.plugin.js",
+    PluginNames.TILE_LAYER: f"{_DEFAULT_PLUGIN_PATH}/tile-layer.plugin.js",
+    PluginNames.GEOJSON_LAYER: f"{_DEFAULT_PLUGIN_PATH}/geojson-layer.plugin.js",
+    PluginNames.LEGEND: f"{_DEFAULT_PLUGIN_PATH}/legend.plugin.js",
+    PluginNames.DATA_CONTROL: f"{_DEFAULT_PLUGIN_PATH}/data-control.plugin.js",
+    PluginNames.METADATA: f"{_DEFAULT_PLUGIN_PATH}/metadata.plugin.js",
+    PluginNames.MARKDOWN: f"{_DEFAULT_PLUGIN_PATH}/markdown.plugin.js",
 }
-_RECOMMENDED_CONFIG = {
+_CONFIG = {
     "imports": _RECOMMENDED_PLUGIN_IMPORTS,
     "plugins": [
         {
@@ -32,5 +45,5 @@ _RECOMMENDED_CONFIG = {
 }
 
 
-def create_recommended_config():
-    return _RECOMMENDED_CONFIG
+def create_config():
+    return _CONFIG

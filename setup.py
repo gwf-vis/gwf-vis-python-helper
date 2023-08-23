@@ -4,5 +4,6 @@ setup(
     name='gwfvis',
     version='0.1',
     description='gwfvis',
-    packages=find_namespace_packages(include=['gwfvis.*'])
+    packages=find_namespace_packages(include=['gwfvis.*']),
+    install_requires=['StrEnum==0.4.1']
 )
