@@ -1,9 +1,10 @@
 import base64
 import json
-from strenum import StrEnum
+from dataclasses import dataclass
 
 
-class PluginNames(StrEnum):
+@dataclass
+class PluginNames:
     SQLITE_LOCAL_DATA_PROVIDER = "gwf-default.sqlite-local-data-provider"
     GWFVISDB_DATA_PROVIDER = "gwf-default.gwfvisdb-data-provider"
     TEST_DATA_FETCHER = "gwf-default.test-data-fetcher"
@@ -13,6 +14,7 @@ class PluginNames(StrEnum):
     DATA_CONTROL = "gwf-default.data-control"
     METADATA = "gwf-default.metadata"
     MARKDOWN = "gwf-default.markdown"
+
 
 _DEFAULT_PLUGIN_PATH = "https://gwf-vis.usask.ca/plugins/default"
 _RECOMMENDED_PLUGIN_IMPORTS = {
