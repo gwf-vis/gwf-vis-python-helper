@@ -14,6 +14,8 @@ class PluginNames:
     DATA_CONTROL = "gwf-default.data-control"
     METADATA = "gwf-default.metadata"
     MARKDOWN = "gwf-default.markdown"
+    LOCATION_Pin = "gwf-default.location-pins"
+    LINE_CHART = "gwf-default.line-chart"
 
 
 _DEFAULT_PLUGIN_PATH = "https://gwf-vis.usask.ca/plugins/default"
@@ -27,6 +29,8 @@ _RECOMMENDED_PLUGIN_IMPORTS = {
     PluginNames.DATA_CONTROL: f"{_DEFAULT_PLUGIN_PATH}/data-control.plugin.js",
     PluginNames.METADATA: f"{_DEFAULT_PLUGIN_PATH}/metadata.plugin.js",
     PluginNames.MARKDOWN: f"{_DEFAULT_PLUGIN_PATH}/markdown.plugin.js",
+    PluginNames.LOCATION_Pin: f"{_DEFAULT_PLUGIN_PATH}/location-pins.plugin.js",
+    PluginNames.LINE_CHART: f"{_DEFAULT_PLUGIN_PATH}/line-chart.plugin.js",
 }
 _CONFIG = {
     "imports": _RECOMMENDED_PLUGIN_IMPORTS,
