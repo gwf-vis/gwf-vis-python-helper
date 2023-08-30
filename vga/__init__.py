@@ -2,11 +2,13 @@ import base64
 import json
 
 _APP_BASE_URL = "https://gwf-vis.usask.ca/app"
-_EMPTY_CONFIG = {"imports": {}, "plugins": []}
 
 
 def create_config():
-    return _EMPTY_CONFIG
+    return {
+        "imports": {},
+        "plugins": []
+    }
 
 
 def set_prefer_canvas(config, value: bool = True):

@@ -32,24 +32,23 @@ _RECOMMENDED_PLUGIN_IMPORTS = {
     PluginNames.LOCATION_PIN: f"{_DEFAULT_PLUGIN_PATH}/location-pins.plugin.js",
     PluginNames.LINE_CHART: f"{_DEFAULT_PLUGIN_PATH}/line-chart.plugin.js",
 }
-_CONFIG = {
-    "imports": _RECOMMENDED_PLUGIN_IMPORTS,
-    "plugins": [
-        {
-            "import": "gwf-default.tile-layer",
-            "container": "",
-            "props": {
-                "displayName": "World_Imagery",
-                "active": True,
-                "urlTemplate": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
-                "options": {
-                    "attribution": "Source: Esri, Maxar, Earthstar Geographics, and the GIS User Community"
-                },
-            },
-        }
-    ],
-}
 
 
 def create_config():
-    return _CONFIG
+    return {
+        "imports": _RECOMMENDED_PLUGIN_IMPORTS,
+        "plugins": [
+            {
+                "import": "gwf-default.tile-layer",
+                "container": "",
+                "props": {
+                    "displayName": "World_Imagery",
+                    "active": True,
+                    "urlTemplate": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+                    "options": {
+                        "attribution": "Source: Esri, Maxar, Earthstar Geographics, and the GIS User Community"
+                    },
+                },
+            }
+        ],
+    }
