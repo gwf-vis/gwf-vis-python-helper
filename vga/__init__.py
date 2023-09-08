@@ -1,7 +1,7 @@
 import base64
 import json
 
-_APP_BASE_URL = "https://gwf-vis.usask.ca/app"
+_APP_BASE_URL = "https://vga-team.github.io/app/"
 
 
 def create_config():
