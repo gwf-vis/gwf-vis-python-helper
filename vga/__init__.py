@@ -18,6 +18,9 @@ def set_prefer_canvas(config, value: bool = True):
 def set_view(config, center: [float, float], zoom: int):
     config["view"] = {"center": center, "zoom": zoom}
 
+def set_access_local_files(config, value: bool = False):
+    config['accessLocalFiles'] = value
+
 
 def import_plugin(config, name: str, url: str):
     config["imports"][name] = url
