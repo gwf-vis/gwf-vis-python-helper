@@ -2,7 +2,7 @@ import base64
 import json
 import urllib
 
-_APP_BASE_URL = "https://vga-team.github.io/app/"
+APP_BASE_URL = "https://vga-team.github.io/app/"
 
 
 def create_config():
@@ -52,7 +52,7 @@ def set_plugin_props(plugin, props={}):
 
 def generate_vis_url(config):
     json_str = json.dumps(config)
-    url = f"{_APP_BASE_URL}?configUrl={urllib.parse.quote(_make_data_url(json_str))}"
+    url = f"{APP_BASE_URL}?configUrl={urllib.parse.quote(_make_data_url(json_str))}"
     return url
 
 
