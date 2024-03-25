@@ -1,6 +1,6 @@
 import base64
 import json
-import urllib
+import urllib.parse
 
 APP_BASE_URL = "https://vga-team.github.io/app/"
 
