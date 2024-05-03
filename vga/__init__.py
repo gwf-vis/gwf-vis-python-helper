@@ -12,6 +12,12 @@ def create_config():
     }
 
 
+def set_page_title(config, value: str):
+    config["pageTitle"] = value
+
+def set_favicon(config, value: str):
+    config["favicon"] = value
+
 def set_prefer_canvas(config, value: bool = True):
     config["preferCanvas"] = value
 
